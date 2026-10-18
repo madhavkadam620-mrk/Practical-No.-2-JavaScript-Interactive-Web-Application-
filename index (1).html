@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Resource Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Student Resource Portal</h1>
+        <p>Register students and manage their academic information</p>
+    </header>
+
+    <main>
+
+        <!-- Registration Form -->
+        <section class="form-section">
+
+            <h2>Student Registration</h2>
+
+            <form id="studentForm">
+
+                <div class="form-group">
+                    <label for="name">Student Name</label>
+                    <input type="text" id="name" placeholder="Enter student name">
+                    <small id="nameError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" placeholder="Enter email">
+                    <small id="emailError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="course">Course</label>
+
+                    <select id="course">
+                        <option value="">Select Course</option>
+                        <option value="BTech">B.Tech</option>
+                        <option value="BE">B.E.</option>
+                        <option value="BCA">BCA</option>
+                        <option value="MCA">MCA</option>
+                    </select>
+
+                    <small id="courseError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="branch">Branch</label>
+
+                    <select id="branch">
+                        <option value="">Select Branch</option>
+                        <option value="Computer Engineering">Computer Engineering</option>
+                        <option value="Information Technology">Information Technology</option>
+                        <option value="AI & ML">AI & ML</option>
+                        <option value="Electronics">Electronics</option>
+                    </select>
+
+                    <small id="branchError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="year">Year</label>
+
+                    <select id="year">
+                        <option value="">Select Year</option>
+                        <option value="1st Year">1st Year</option>
+                        <option value="2nd Year">2nd Year</option>
+                        <option value="3rd Year">3rd Year</option>
+                        <option value="4th Year">4th Year</option>
+                    </select>
+
+                    <small id="yearError"></small>
+                </div>
+
+                <button type="submit">Register Student</button>
+
+            </form>
+
+            <p id="successMessage"></p>
+
+        </section>
+
+
+        <!-- Search Section -->
+
+        <section class="student-section">
+
+            <div class="section-heading">
+                <h2>Registered Students</h2>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search student..."
+                >
+            </div>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Course</th>
+                            <th>Branch</th>
+                            <th>Year</th>
+                            <th>Action</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="studentTable">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <p id="noStudent">No students registered yet.</p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Student Resource Portal | JavaScript Practical</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
